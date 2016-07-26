@@ -1,3 +1,9 @@
+<?php
+if (!($_SESSION['usuario_logado'])) {
+    $this->session->set_flashdata("danger", "Você deve se logar primeiro");
+    redirect('/');
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -66,7 +72,7 @@
                             </li>
                             <li class="divider"></li>
                             <li>
-                                <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                                <?= anchor('admin/usuarios/logout', '<i class="fa fa-fw fa-power-off"></i> Log Out', 'title="sair"'); ?> 
                             </li>
                         </ul>
                     </li>
