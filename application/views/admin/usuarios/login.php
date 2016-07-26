@@ -20,20 +20,35 @@
         <!-- Custom Fonts -->
         <link href="<?= base_url('assets/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
     </head>
+    <style>
+        body {
+            background-image: url("<?= base_url("assets/img/fundo-login2.jpg");?>");
+        }
+        .panel {
+            margin-top: 30%;
+            background-color: rgba(255,255,255,0.5);
+        }
+        .panel-default>.panel-heading {
+            color: #333;
+            background: none;
+            border: none;
+        }
+    </style>
     <body>
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
-                    <?php
-                    if (($this->session->flashdata('danger'))) {
-                        echo '<p class="alert alert-danger">' . $this->session->flashdata('danger') . '</p>';
-                    }
-                    ?>
+
                     <div class="login-panel panel panel-default">
-                        <div class="panel-heading">
-                            <?= img('tema/img/Kairos.png', FALSE, array('class' => 'kairos')); ?>
+                        <div class="panel-heading text-center">
+                            <?= img('assets/img/logo.png', FALSE, array('class' => 'logo-login')); ?>
                         </div>
                         <div class="panel-body">
+                            <?php
+                            if (($this->session->flashdata('danger'))) {
+                                echo '<p class="alert alert-danger">' . $this->session->flashdata('danger') . '</p>';
+                            }
+                            ?>
                             <?php
                             echo form_open('admin/usuarios/login', array('rule' => 'form', 'class' => 'form_login'));
                             echo form_label('Nome');
@@ -42,7 +57,7 @@
                             echo form_input(array('class' => 'form-control', 'type' => 'password', 'name' => 'senha', 'id' => 'senha', set_value('senha')));
                             echo div_open('form-group text-right');
                             echo '<br>';
-                            echo form_button(array('class' => 'btn btn-laranja', 'type' => 'submit', 'content' => 'Entrar'));
+                            echo form_button(array('class' => 'btn btn-azul', 'type' => 'submit', 'content' => 'Entrar'));
                             echo div_close();
                             echo form_close();
                             ?>
