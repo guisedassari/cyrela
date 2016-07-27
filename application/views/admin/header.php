@@ -1,7 +1,7 @@
 <?php
 if (!($_SESSION['usuario_logado'])) {
     $this->session->set_flashdata("danger", "Você deve se logar primeiro");
-    redirect('/');
+    redirect('admin/usuarios');
 }
 ?>
 <!DOCTYPE html>

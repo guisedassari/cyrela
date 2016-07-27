@@ -19,7 +19,7 @@ class Usuarios extends CI_Controller {
         if ($usuario) {
             $this->session->set_userdata('usuario_logado', $usuario);
             $this->session->set_flashdata("success", "Bem vindo");
-            redirect('welcome');
+            redirect('admin/clientes/clientes/');
             
         } else {
             $this->session->set_flashdata("danger", "Usuario ou senha invalidos");
