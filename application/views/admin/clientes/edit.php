@@ -1,5 +1,7 @@
 <?php
-echo form_open('admin/clientes/clientes/edit', array('rule' => 'form', 'class' => 'form_add'));
+echo form_open('admin/clientes/clientes/editar', array('rule' => 'form', 'class' => 'form_add'));
+
+echo form_hidden('id_cliente', $cliente->id_cliente);
 
 echo div_open('col-md-6');
 echo form_label('Nome');
@@ -44,8 +46,8 @@ echo form_label('Newsletter', 'newsletter');
 $data = array(
         'name'          => 'newsletter',
         'id'            => 'newsletter',
-        'value'         => 'accept',
-        'checked'       => $cliente->newsletter,
+       'value'         => 'accept',
+        'checked'       => TRUE,
         'style'         => 'margin:10px'
 );
 echo form_checkbox($data);

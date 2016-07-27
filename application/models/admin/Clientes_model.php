@@ -24,6 +24,10 @@ class Clientes_model extends CI_Model {
             $this->db->insert('clientes', $dados);
         }
     }
-   
-
+     public function alterar($dados = null) {
+         //debbug($dados);
+        if ($dados != null) {
+            return $this->db->update('clientes', $dados, array('id_cliente' => $dados['id_cliente']));
+        }
+    }
 }
