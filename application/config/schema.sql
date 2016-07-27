@@ -24,9 +24,10 @@ DROP TABLE IF EXISTS `caricaturas`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `caricaturas` (
   `id_caricatura` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(45) DEFAULT NULL,
+  `nome_caricatura` varchar(45) DEFAULT NULL,
   `created` date DEFAULT NULL,
   `modified` date DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_caricatura`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -54,11 +55,12 @@ CREATE TABLE `clientes` (
   `cidade` varchar(255) DEFAULT NULL,
   `telefone` varchar(45) DEFAULT NULL,
   `newsletter` int(11) DEFAULT NULL,
-  `caricatura_id` int(11) DEFAULT NULL,
+  `caricatura` varchar(255) DEFAULT NULL,
   `created` date DEFAULT NULL,
   `modified` date DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_cliente`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,6 +69,7 @@ CREATE TABLE `clientes` (
 
 LOCK TABLES `clientes` WRITE;
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
+INSERT  IGNORE INTO `clientes` (`id_cliente`, `nome`, `sobrenome`, `cidade`, `telefone`, `newsletter`, `caricatura`, `created`, `modified`, `status`) VALUES (1,'Mauro','Filho','Ribeirão Preto','(16) 992430621',0,NULL,NULL,NULL,'ativo'),(2,'Guilherme','Sedassari','Ribeirão Preto','(16) 992430621',0,'banner01.jpg',NULL,NULL,'ativo'),(3,'Teste','teste','teste','teste',0,'banner02.jpg',NULL,NULL,'inativo'),(4,'asdfasdf','asdfasdf','asdfasdf','asdfasdf',1,'faixa-entregue.png',NULL,NULL,'ativo'),(5,'asdfa','asdfasdf','asdfasdf','asdfasdf',0,'38h.jpg',NULL,NULL,'ativo');
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -82,6 +85,7 @@ CREATE TABLE `enquetes` (
   `cliente_id` int(11) DEFAULT NULL,
   `created` date DEFAULT NULL,
   `modified` date DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_enquete`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -108,8 +112,9 @@ CREATE TABLE `usuarios` (
   `senha` varchar(255) DEFAULT NULL,
   `created` date DEFAULT NULL,
   `modified` date DEFAULT NULL,
+  `usuarioscol` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -118,6 +123,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT  IGNORE INTO `usuarios` (`id_usuario`, `nome`, `senha`, `created`, `modified`, `usuarioscol`) VALUES (1,'admin','123456',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -130,4 +136,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-25 17:24:14
+-- Dump completed on 2016-07-26 23:15:32

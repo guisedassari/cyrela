@@ -1,5 +1,5 @@
 <?php
-echo form_open('clientes/add', array('rule' => 'form', 'class' => 'form_add'));
+echo form_open('admin/clientes/clientes/add', array('rule' => 'form', 'class' => 'form_add'));
 
 echo div_open('col-md-6');
 echo form_label('Nome');
@@ -35,7 +35,7 @@ echo div_close();
 
 echo div_open('col-md-6');
 echo form_label('Caricatura');
-echo form_upload(array('class' => 'form-control','name' => 'nome_caricatura'));
+echo form_upload(array('class' => 'form-control','name' => 'caricatura'));
 echo validation_errors('<p class="alert alert-danger">', '</p>');
 echo div_close();
 

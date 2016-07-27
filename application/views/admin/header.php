@@ -90,7 +90,7 @@ if (!($_SESSION['usuario_logado'])) {
                             <a href="charts.html"><i class="fa fa-picture-o" aria-hidden="true"></i> Caricaturas</a>
                         </li>
                         <li>
-                            <?= anchor('clientes', '<i class="fa fa-users" aria-hidden="true"></i> Clientes');?>
+                            <?= anchor('admin/clientes/clientes', '<i class="fa fa-users" aria-hidden="true"></i> Clientes');?>
                         </li>
                         <li>
                             <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>

@@ -4,8 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Usuarios extends CI_Controller {
 
-    use FuncoesController;
-
     public function __construct() {
         parent::__construct();
         $this->load->model('admin/usuarios_model');
@@ -21,7 +19,8 @@ class Usuarios extends CI_Controller {
         if ($usuario) {
             $this->session->set_userdata('usuario_logado', $usuario);
             $this->session->set_flashdata("success", "Bem vindo");
-            $this->render('admin/dashboard');
+            redirect('welcome');
+            
         } else {
             $this->session->set_flashdata("danger", "Usuario ou senha invalidos");
             redirect('admin/usuarios');
