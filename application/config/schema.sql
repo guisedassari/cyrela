@@ -60,7 +60,7 @@ CREATE TABLE `clientes` (
   `modified` date DEFAULT NULL,
   `status` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_cliente`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `clientes` (
 
 LOCK TABLES `clientes` WRITE;
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
-INSERT  IGNORE INTO `clientes` (`id_cliente`, `nome`, `sobrenome`, `cidade`, `telefone`, `newsletter`, `caricatura`, `created`, `modified`, `status`) VALUES (1,'Mauro','Filho','Ribeirão Preto','(16) 992430621',0,NULL,NULL,NULL,'ativo'),(2,'Guilherme','Sedassari','Ribeirão Preto','(16) 992430621',0,'banner01.jpg',NULL,NULL,'ativo'),(3,'Teste','teste','teste','teste',0,'banner02.jpg',NULL,NULL,'inativo'),(4,'asdfasdf','asdfasdf','asdfasdf','asdfasdf',1,'faixa-entregue.png',NULL,NULL,'ativo'),(5,'asdfa','asdfasdf','asdfasdf','asdfasdf',0,'38h.jpg',NULL,NULL,'ativo');
+INSERT  IGNORE INTO `clientes` (`id_cliente`, `nome`, `sobrenome`, `cidade`, `telefone`, `newsletter`, `caricatura`, `created`, `modified`, `status`) VALUES (6,'Guilherme ','Sedassari','Ribeirão Preto','16992430621',0,'5534a0b270c6d4202accdfc9af020d6c.png',NULL,NULL,'ativo'),(7,'asdfasdf','asdfasdf','asdfasdf','asdfasdf',0,'00da92cae8dd32e9acfb647d51292b91.png',NULL,NULL,'ativo'),(9,'asdasdf','asdfasdf','asdfasd','asdfasdf',0,'9df02ff6407e5fb06b2594cfff0f8819.png',NULL,NULL,'ativo'),(11,'fadsfasdf','asdfasdf','asdfasdf','asdfasdfasdf',0,'b22e98fc5c7933953593ebb67e5068c0.png',NULL,NULL,'ativo'),(12,'Teste','','','',0,'5a0ffe7bb75f1bb5dbf3bbd5211a397b.jpg',NULL,NULL,'ativo');
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,8 +83,9 @@ DROP TABLE IF EXISTS `enquetes`;
 CREATE TABLE `enquetes` (
   `id_enquete` int(11) NOT NULL AUTO_INCREMENT,
   `cliente_id` int(11) DEFAULT NULL,
-  `created` date DEFAULT NULL,
-  `modified` date DEFAULT NULL,
+  `pergunta1` varchar(255) DEFAULT NULL,
+  `pergunta2` varchar(255) DEFAULT NULL,
+  `pergunta3` varchar(255) DEFAULT NULL,
   `status` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_enquete`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -136,4 +137,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-26 23:15:32
+-- Dump completed on 2016-07-27 23:01:53
