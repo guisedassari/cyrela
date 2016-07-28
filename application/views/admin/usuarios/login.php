@@ -46,7 +46,7 @@
                         <div class="panel-body">
                             <?php
                             if (($this->session->flashdata('danger'))) {
-                                echo '<p class="alert alert-danger">' . $this->session->flashdata('danger') . '</p>';
+                                echo '<div class="alert alert-danger">' . $this->session->flashdata('danger') . '</div>';
                             }
                             ?>
                             <?php

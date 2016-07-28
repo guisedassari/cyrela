@@ -1,5 +1,6 @@
 <?php
-echo form_open('admin/clientes/clientes/editar', array('rule' => 'form', 'class' => 'form_add'));
+//debbug($cliente);
+echo form_open_multipart('admin/clientes/clientes/do_upload_alterar', array('rule' => 'form', 'class' => 'form_add'));
 
 echo form_hidden('id_cliente', $cliente->id_cliente);
 
@@ -37,7 +38,7 @@ echo div_close();
 
 echo div_open('col-md-6');
 echo form_label('Caricatura');
-echo form_upload(array('class' => 'form-control','name' => 'caricatura','value' => $cliente->caricatura));
+echo form_upload(array('class' => 'form-control','name' => 'caricatura'));
 echo validation_errors('<p class="alert alert-danger">', '</p>');
 echo div_close();
 

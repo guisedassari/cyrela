@@ -25,9 +25,11 @@ class Clientes_model extends CI_Model {
         }
     }
      public function alterar($dados = null) {
-         //debbug($dados);
         if ($dados != null) {
             return $this->db->update('clientes', $dados, array('id_cliente' => $dados['id_cliente']));
         }
+    }
+    public function deletar($id_cliente = null) {
+        return $this->db->delete('clientes', array('id_cliente' => $id_cliente));  // Produces: // DELETE FROM mytable  // WHERE id = $id
     }
 }
