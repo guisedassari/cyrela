@@ -55,3 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'admin/usuarios/index';
 $route['toten'] = 'toten/caricaturas/index';
 
+//http://www.inprose.com/en/articles/7-how-to-enable-modrewrite-in-apache-on-fedora.html
+
