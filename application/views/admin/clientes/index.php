@@ -13,7 +13,7 @@ $template = array(
 );
 
 $this->table->set_template($template);
-$this->table->set_heading('Caricatura','Nome', 'Sobrenome', 'Cidade', 'Telefone', 'NewsLetter', 'Status','Ações', '');
+$this->table->set_heading('Caricatura','Nome', 'Sobrenome', 'Cidade', 'Telefone', 'NewsLetter','Ações', '');
 foreach ($clientes as $cliente) {
     $this->table->add_row(
             img(array('src' => base_url("uploads/".$cliente['caricatura']), 'class' => 'caricatura')),
@@ -22,7 +22,6 @@ foreach ($clientes as $cliente) {
             $cliente['cidade'], 
             $cliente['telefone'], 
             $cliente['newsletter'], 
-            $cliente['status'],
             anchor("admin/clientes/clientes/edit/{$cliente['id_cliente']}", '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>', array('class' => 'btn btn-azul')),
             anchor("admin/clientes/clientes/delete/{$cliente['id_cliente']}/{$cliente['caricatura']}", '<i class="fa fa-trash" aria-hidden="true"></i>', array('class' => 'btn btn-danger'))
             ); 

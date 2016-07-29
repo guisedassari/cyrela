@@ -6,36 +6,23 @@ if (!($_SESSION['usuario_logado'])) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
     <head>
-
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-
-
         <title>Cyrela</title>
         <link rel="shortcut icon" href="<?= base_url("assets/img/cyrela.ico"); ?>" type="image/x-icon" />
         <!-- Bootstrap Core CSS -->
         <link href="<?= base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
-
         <!-- Custom CSS -->
         <link href="<?= base_url('assets/css/sb-admin.css') ?>" rel="stylesheet">
         <link href="<?= base_url('assets/css/admin-style.css') ?>" rel="stylesheet">
-
-        <!-- Morris Charts CSS -->
-<!--        <link href="<?= base_url('assets/css/plugins/morris.css') ?>" rel="stylesheet">-->
-
         <!-- Custom Fonts -->
         <link href="<?= base_url('assets/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
-
-
     </head>
-
     <body>
-
         <div id="wrapper">
             <!-- Navigation -->
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -53,15 +40,6 @@ if (!($_SESSION['usuario_logado'])) {
                 </div>
                 <!-- Top Menu Items -->
                 <ul class="nav navbar-right top-nav">
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                        <ul class="dropdown-menu alert-dropdown">
-                            <li>
-                                <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-user"></i>  <?= $_SESSION['usuario_logado']->nome ?> <b class="caret"></b>
@@ -83,25 +61,11 @@ if (!($_SESSION['usuario_logado'])) {
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
-                        <li class="active">
-                            <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                        </li>
                         <li>
                             <?= anchor('admin/clientes/clientes/caricaturas', '<i class="fa fa-picture-o" aria-hidden="true"></i> Caricaturas');?>
                         </li>
                         <li>
                             <?= anchor('admin/clientes/clientes', '<i class="fa fa-users" aria-hidden="true"></i> Clientes');?>
-                        </li>
-                        <li>
-                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                            <ul id="demo" class="collapse">
-                                <li>
-                                    <a href="#">Dropdown Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Dropdown Item</a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -115,7 +79,7 @@ if (!($_SESSION['usuario_logado'])) {
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Dashboard <small>Statistics Overview</small>
+                            Sistema Cyrela <small>Caricaturas</small>
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">

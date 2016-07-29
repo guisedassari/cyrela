@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Tillana:400,500);
+
+.legenda p {
+    font-family: 'Tillana', cursive;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: -15px
+}
+
+.form-control {
+border-radius: 0px!important;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 0px;
+}
+
+.btn-azul {
+    color: #fff;
+    background-color: #00adef;
+    border-color: #00adef;
+}
+.btn-azul:hover {
+    color: #fff;
+    background-color: #1eb6ed;
+    border-color: #1eb6ed;
+}
+
+.example-image-link {
+    cursor: pointer;
+}
