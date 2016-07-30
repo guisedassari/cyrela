@@ -4,11 +4,14 @@
     font-family: 'Tillana', cursive;
     font-size: 20px;
     margin-bottom: 20px;
-    margin-top: -15px
+    margin-top: -15px;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
 }
 
 .form-control {
-border-radius: 0px!important;
+    border-radius: 0px!important;
 }
 
 .btn {
@@ -47,3 +50,31 @@ border-radius: 0px!important;
 .example-image-link {
     cursor: pointer;
 }
+
+body {
+    background-image: url("../img/fundo-login2.jpg");
+}
+
+.navbar-inverse {
+    background-color: #222;
+    border-color: #080808;
+}
+
+.panel-heading {
+    padding: 5px 10px;
+
+}
+
+.thumbnail>img {
+    object-fit: cover;
+    height: 200px!important;
+}
+
+
+
+.painel {
+    background-color: rgba(255,255,255,0.5);
+    padding: 15px;
+}
+
+    

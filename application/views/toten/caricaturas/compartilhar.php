@@ -1,45 +1,20 @@
 <?php
-//debbug($id_cliente);
+//xdebbug($cliente);
 ?>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Email</button>
-<?php
-$atts = array(
-        'width'       => 800,
-        'height'      => 600,
-        'scrollbars'  => 'yes',
-        'status'      => 'yes',
-        'resizable'   => 'yes',
-        'screenx'     => 250,
-        'screeny'     => 50,
-        'window_name' => '_blank'
-    
-);
+<div class="col-md-6 col-md-offset-3 text-center">
+    <?= img(array('src' => base_url("uploads/" . $cliente->caricatura), 'class' => 'img-responsive')); ?>
+    <br>
+</div>
 
-echo anchor_popup('toten/caricaturas/compartilhar', 'Click Me!', $atts);?>
+<div class="col-md-6 col-md-offset-3">
+    <div class="row">
+        <div class="col-md-6 text-left">
+            <button type="button" class="btn btn-azul" data-toggle="modal" data-target="#exampleModal<?= $cliente->id_cliente; ?>" data-whatever="@getbootstrap"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</button>
+            <?php include 'modal_email.php'; ?>
+        </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="control-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="control-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
+        <div class="col-md-6 text-right">
+            <button type="button" class="btn btn-azul" data-toggle="modal" data-target="#exampleModal<?= $cliente->id_cliente; ?>" data-whatever="@getbootstrap"> <i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</button>
+        </div>
     </div>
-  </div>
 </div>

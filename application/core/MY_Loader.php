@@ -10,5 +10,12 @@ class MY_Loader extends CI_Loader {
         $this->view($nome, $dados);
         $this->view('admin/footer.php');
     }
+    
+    public function toten($nome, $dados = null) {
+
+        $this->view('toten/header.php');
+        $this->view($nome, $dados);
+        $this->view('toten/footer.php');
+    }
 
 }

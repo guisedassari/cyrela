@@ -6,15 +6,15 @@ class Caricaturas extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
+        //$this->output->enable_profiler(TRUE);
         $this->load->model('admin/clientes_model');
+        $this->load->library("email");
     }
 
     public function index() {
         $clientes = $this->clientes_model->visualizar();
 
-        $this->load->view("/toten/header.php");
-        $this->load->view("/toten/caricaturas/index.php", compact('clientes'));
-        $this->load->view("/toten/footer.php");
+        $this->load->toten("/toten/caricaturas/index.php", compact('clientes'));
     }
 
     public function editar() {
@@ -22,9 +22,8 @@ class Caricaturas extends CI_Controller {
         $id_cliente = $dados['id_cliente'];
         if ($dados != null) {
             $this->clientes_model->alterar($dados);
-            $this->load->view("/toten/header.php");
-            $this->load->view("/toten/caricaturas/questionario.php", compact('id_cliente'));
-            $this->load->view("/toten/footer.php");
+
+            $this->load->toten("/toten/caricaturas/questionario.php", compact('id_cliente'));
         }
     }
 
@@ -32,9 +31,7 @@ class Caricaturas extends CI_Controller {
 
         $cliente = $this->clientes_model->visualizar_id($id_clinte);
 
-        $this->load->view("/toten/header.php");
-        $this->load->view("/toten/caricaturas/cadastro.php", compact('cliente'));
-        $this->load->view("/toten/footer.php");
+        $this->load->toten("/toten/caricaturas/cadastro.php", compact('cliente'));
     }
 
     public function enquete_save() {
@@ -43,15 +40,37 @@ class Caricaturas extends CI_Controller {
             $this->load->model('admin/enquetes_model');
             $this->enquetes_model->save($dados);
             $id_cliente = $dados['cliente_id'];
+            $cliente = $this->clientes_model->visualizar_id($id_cliente);
 
-            $this->load->view("/toten/header.php");
-            $this->load->view("/toten/caricaturas/compartilhar.php", compact('id_cliente'));
-            $this->load->view("/toten/footer.php");
+            $this->load->toten("/toten/caricaturas/compartilhar.php", compact('cliente'));
         }
     }
-    
+
     public function compartilhar() {
-        $this->load->view("/toten/caricaturas/teste.php");
+
+        $dados = $this->input->post();
+        //debbug($dados);
+        $this->load->library('email');
+        
+        $config['protocol'] = 'sendmail';
+        $config['mailpath'] = '/usr/sbin/sendmail';
+        $config['charset'] = 'iso-8859-1';
+        $config['wordwrap'] = TRUE;
+
+        $this->email->initialize($config);
+
+        $this->email->from('guisedassari@gmail.com', 'Guilherme');
+        $this->email->to('guisedassari@gmail.com');
+
+        $this->email->subject('Email Test');
+        $this->email->message('Testing the email class.');
+
+        $this->email->send();
+
+        
+
+        $this->session->set_flashdata("success", "Email enviado com sucesso");
+        redirect("toten");
     }
 
 }

@@ -1,0 +1,1 @@
+<a class="example-image-link thumbnail" href="<?= base_url() . 'toten/caricaturas/cadastro/' . $cliente['id_cliente'] ?>"></a>

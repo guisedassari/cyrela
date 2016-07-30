@@ -14,6 +14,12 @@ echo validation_errors('<p class="alert alert-danger">', '</p>');
 echo div_close();
 
 echo div_open('col-md-6');
+echo form_label('email');
+echo form_input(array('class' => 'form-control', 'name' => 'email'));
+echo validation_errors('<p class="alert alert-danger">', '</p>');
+echo div_close();
+
+echo div_open('col-md-6');
 echo form_label('Cidade');
 echo form_input(array('class' => 'form-control', 'name' => 'cidade'));
 echo validation_errors('<p class="alert alert-danger">', '</p>');

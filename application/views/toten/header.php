@@ -12,9 +12,20 @@
 
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-         <link href="<?= base_url('assets/css/style.css') ?>" rel="stylesheet">
+        <link href="<?= base_url('assets/css/style.css') ?>" rel="stylesheet">
+         <!-- Custom Fonts -->
+        <link href="<?= base_url('assets/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
     </head>
     <body>
-        
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="panel-heading">
+                    <?= img('assets/img/topo-logo-cyrela-rjz.png', FALSE, array('class' => 'logo-login')); ?>
+                </div>
+            </div>
+        </nav>
+        <br><br><br><br>
+        <div class="container painel">
+
 
 
