@@ -1,19 +1,18 @@
-@import url(https://fonts.googleapis.com/css?family=Tillana:400,500);
-
+/*@import url(https://fonts.googleapis.com/css?family=Tillana:400,500);*/
 .legenda p {
     font-family: 'Tillana', cursive;
     font-size: 20px;
     margin-bottom: 20px;
-    margin-top: -15px;
+    margin-top: -70px;
     padding: 10px;
     background-color: rgba(0,0,0,0.5);
     color: #fff;
+    position: relative;
 }
 
 .form-control {
     border-radius: 0px!important;
 }
-
 .btn {
     display: inline-block;
     padding: 6px 12px;
@@ -35,7 +34,6 @@
     border: 1px solid transparent;
     border-radius: 0px;
 }
-
 .btn-azul {
     color: #fff;
     background-color: #00adef;
@@ -46,35 +44,50 @@
     background-color: #1eb6ed;
     border-color: #1eb6ed;
 }
-
 .example-image-link {
     cursor: pointer;
 }
-
 body {
-    background-image: url("../img/fundo-login2.jpg");
+    background-color: #ddd;
 }
-
 .navbar-inverse {
     background-color: #222;
     border-color: #080808;
 }
-
 .panel-heading {
     padding: 5px 10px;
-
 }
-
 .thumbnail>img {
+    width: 100%;
     object-fit: cover;
     height: 200px!important;
 }
-
-
-
+.logo-login {
+    max-width: 100px;
+    padding: 5px;
+}
 .painel {
-    background-color: rgba(255,255,255,0.5);
     padding: 15px;
 }
+.input-pesquisa {
+    margin: 5px;
+}
 
+.formulario-questionario label {
+    font-size: 20px;
+    
+}
+.formulario-questionario {
+    margin-top: 30px;
+}
+
+.barra {
+       background-color: rgba(0,0,0,0.5);
+    padding: 15px;
+    margin: -84px 0;
+}
+
+.img-compartilhar {
+    width: 100%;
+}
     

@@ -10,4 +10,9 @@ class Enquetes_model extends CI_Model {
             $this->db->insert('enquetes', $dados);
         }
     }
+     public function atualizar($dados = null) {
+        if ($dados != null) {
+            $this->db->update('enquetes', $dados, array('cliente_id' => $dados['cliente_id']));
+        }
+    }
 }

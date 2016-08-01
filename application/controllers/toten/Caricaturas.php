@@ -42,6 +42,30 @@ class Caricaturas extends CI_Controller {
             $id_cliente = $dados['cliente_id'];
             $cliente = $this->clientes_model->visualizar_id($id_cliente);
 
+            $this->load->toten("/toten/caricaturas/questionario2.php", compact('cliente'));
+        }
+    }
+    
+     public function enquete_save2() {
+        $dados = $this->input->post();
+        if ($dados != null) {
+            $this->load->model('admin/enquetes_model');
+            $this->enquetes_model->atualizar($dados);
+            $id_cliente = $dados['cliente_id'];
+            $cliente = $this->clientes_model->visualizar_id($id_cliente);
+
+            $this->load->toten("/toten/caricaturas/questionario3.php", compact('cliente'));
+        }
+    }
+    
+     public function enquete_save3() {
+        $dados = $this->input->post();
+        if ($dados != null) {
+            $this->load->model('admin/enquetes_model');
+            $this->enquetes_model->atualizar($dados);
+            $id_cliente = $dados['cliente_id'];
+            $cliente = $this->clientes_model->visualizar_id($id_cliente);
+
             $this->load->toten("/toten/caricaturas/compartilhar.php", compact('cliente'));
         }
     }
