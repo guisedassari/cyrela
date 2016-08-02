@@ -1035,7 +1035,6 @@ class MY_Email extends CI_Email {
         $this->properties['smtp_conn_options'] = $value;
 
         if ($this->mailer_engine == 'phpmailer') {
-            var_dump($value);
             $this->phpmailer->SMTPOptions = $value;
             $this->phpmailer->SMTPOptions = array(
                 'ssl' => array(

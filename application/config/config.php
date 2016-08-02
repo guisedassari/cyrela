@@ -36,6 +36,8 @@ $config['base_url'] = 'http://localhost/cyrela';
 |
 */
 $config['index_page'] = 'index.php';
+$config['index_page'] = '';
+
 
 /*
 |--------------------------------------------------------------------------

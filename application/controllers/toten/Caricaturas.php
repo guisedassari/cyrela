@@ -102,11 +102,10 @@ class Caricaturas extends CI_Controller {
                 ->from('guisedassari@gmail.com')
                 /* ->reply_to('guisedassari@gmail.com')   */ // Optional, an account where a human being reads.
                 ->to($dados['email'])
-                ->subject($subject) 
+                ->subject($subject)
                 ->message($body)
                 ->send();
-        $this->session->set_flashdata("success", "Email enviado com sucesso");
-        redirect('http://querovivernesserio.com.br/caricaturas/toten');
+        redirect('/toten');
     }
 
 }
