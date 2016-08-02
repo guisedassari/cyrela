@@ -45,8 +45,8 @@ class Caricaturas extends CI_Controller {
             $this->load->toten("/toten/caricaturas/questionario2.php", compact('cliente'));
         }
     }
-    
-     public function enquete_save2() {
+
+    public function enquete_save2() {
         $dados = $this->input->post();
         if ($dados != null) {
             $this->load->model('admin/enquetes_model');
@@ -57,8 +57,8 @@ class Caricaturas extends CI_Controller {
             $this->load->toten("/toten/caricaturas/questionario3.php", compact('cliente'));
         }
     }
-    
-     public function enquete_save3() {
+
+    public function enquete_save3() {
         $dados = $this->input->post();
         if ($dados != null) {
             $this->load->model('admin/enquetes_model');
@@ -73,28 +73,40 @@ class Caricaturas extends CI_Controller {
     public function compartilhar() {
 
         $dados = $this->input->post();
-        //debbug($dados);
+        //xdebbug($dados);
         $this->load->library('email');
-        
-        $config['protocol'] = 'sendmail';
-        $config['mailpath'] = '/usr/sbin/sendmail';
-        $config['charset'] = 'iso-8859-1';
-        $config['wordwrap'] = TRUE;
 
-        $this->email->initialize($config);
+        $subject = 'Cyrela Caricatura';
+        $message = img(array("src" => base_url("uploads/" . $dados["caricatura"])));
 
-        $this->email->from('guisedassari@gmail.com', 'Guilherme');
-        $this->email->to('guisedassari@gmail.com');
+        // Get full html:
+        $body = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+             <meta http-equiv="Content-Type" content="text/html; charset=' . strtolower(config_item('charset')) . '" />
+            <title>' . html_escape($subject) . '</title>
+            <style type="text/css">
+             body {
+                 font-family: Arial, Verdana, Helvetica, sans-serif;
+                font-size: 16px;
+             }
+            </style>
+        </head>
+        <body>
+        ' . $message . '
+        </body>
+        </html>';
 
-        $this->email->subject('Email Test');
-        $this->email->message('Testing the email class.');
 
-        $this->email->send();
-
-        
-
+        $result = $this->email
+                ->from('guisedassari@gmail.com')
+                /* ->reply_to('guisedassari@gmail.com')   */ // Optional, an account where a human being reads.
+                ->to($dados['email'])
+                ->subject($subject) 
+                ->message($body)
+                ->send();
         $this->session->set_flashdata("success", "Email enviado com sucesso");
-        redirect("toten");
+        redirect('http://querovivernesserio.com.br/caricaturas/toten');
     }
 
 }

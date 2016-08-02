@@ -13,12 +13,13 @@ $template = array(
 );
 
 $this->table->set_template($template);
-$this->table->set_heading('Caricatura','Nome', 'Sobrenome', 'Cidade', 'Telefone', 'NewsLetter','Ações', '');
+$this->table->set_heading('Caricatura','Nome', 'Sobrenome', 'Email','Cidade', 'Telefone', 'NewsLetter','Ações', '');
 foreach ($clientes as $cliente) {
     $this->table->add_row(
             img(array('src' => base_url("uploads/".$cliente['caricatura']), 'class' => 'caricatura')),
             $cliente['nome'], 
             $cliente['sobrenome'], 
+            $cliente['email'], 
             $cliente['cidade'], 
             $cliente['telefone'], 
             $cliente['newsletter'], 
