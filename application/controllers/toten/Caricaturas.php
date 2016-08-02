@@ -16,6 +16,16 @@ class Caricaturas extends CI_Controller {
 
         $this->load->toten("/toten/caricaturas/index.php", compact('clientes'));
     }
+    
+    public function pesquisa() {
+        $nome = $this->input->post('pesquisa');
+         $cliente = $this->clientes_model->search($nome);
+        if ($cliente == null) {
+             $this->session->set_flashdata("danger", "Nenhuma caricatura encontrada com esse nome");
+         redirect('/toten');
+        }
+        $this->load->toten("/toten/caricaturas/pesquisa.php", compact('cliente'));
+    }
 
     public function editar() {
         $dados = $this->input->post();

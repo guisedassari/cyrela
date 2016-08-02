@@ -22,12 +22,14 @@
                             <?= img('assets/img/topo-logo-cyrela-rjz.png', FALSE, array('class' => 'logo-login')); ?>
                         </div>
                         <div class="col-lg-6">
-                            <div class="input-group input-pesquisa">
-                                <input type="text" class="form-control" placeholder="Pesquisar">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-azul" type="button">Buscar</button>
-                                </span>
-                            </div><!-- /input-group -->
+                            <form action="pesquisar" method="post">
+                                <div class="input-group input-pesquisa">
+                                    <input type="text" name="pesquisa" class="form-control" placeholder="Pesquisar">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-azul" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    </span>
+                                </div><!-- /input-group -->
+                            </form>
                         </div><!-- /.col-lg-6 -->
                     </div><!-- /.row -->
                 </div>
@@ -35,6 +37,13 @@
         </nav>
         <br><br>
         <div class="container painel">
+
+            <?php
+            if (($this->session->flashdata('danger'))) {
+                echo '<br>';
+                echo '<div class="alert alert-danger">' . $this->session->flashdata('danger') . '</div>';
+            }
+            ?>
 
 
 

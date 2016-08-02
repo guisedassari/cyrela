@@ -19,6 +19,8 @@
     echo form_radio('pergunta1', 'Fora do Rio', FALSE, ['id' => 'teste5']) . "" . form_label('Fora do Rio', 'teste5');
     echo '<br>';
     echo div_open('text-right');
+    echo anchor('/toten', '<i class="fa fa-sign-out" aria-hidden="true"></i> Voltar ao inicio', array('class' => 'btn btn-azul'));
+    echo '&nbsp;';
     echo form_button(array('class' => 'btn btn-azul', 'type' => 'submit', 'content' => '<i class="fa fa-floppy-o" aria-hidden="true"></i> Enviar'));
     echo div_close();
     echo div_close();

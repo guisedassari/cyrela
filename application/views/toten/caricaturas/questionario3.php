@@ -4,7 +4,7 @@
     echo form_hidden('cliente_id', $cliente->id_cliente);
 
     echo div_open('col-md-6 col-md-offset-3');
-     echo div_open('pergunta');
+    echo div_open('pergunta');
     echo form_label('Em que região deseja comprar um imóvel?');
     echo div_close();
     echo '<br>';
@@ -18,6 +18,8 @@
     echo '<br>';
 
     echo div_open('col-md-12 text-right');
+    echo anchor('/toten', '<i class="fa fa-sign-out" aria-hidden="true"></i> Voltar ao inicio', array('class' => 'btn btn-azul'));
+    echo '&nbsp;';
     echo form_button(array('class' => 'btn btn-azul', 'type' => 'submit', 'content' => '<i class="fa fa-floppy-o" aria-hidden="true"></i> Enviar'));
     echo div_close();
     echo div_close();
