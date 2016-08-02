@@ -74,15 +74,19 @@ body {
 }
 
 .formulario-questionario label {
-    font-size: 20px;
-    
+    font-size: 25px;
+
+}
+
+.pergunta label {
+font-size: 35px;           
 }
 .formulario-questionario {
     margin-top: 30px;
 }
 
 .barra {
-       background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
     padding: 15px;
     margin: -84px 0;
 }
@@ -90,4 +94,3 @@ body {
 .img-compartilhar {
     width: 100%;
 }
-    

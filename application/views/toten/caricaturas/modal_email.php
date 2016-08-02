@@ -3,14 +3,14 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                <h4 class="modal-title" id="exampleModalLabel">Cyrela Caricaturas</h4>
             </div>
             <div class="modal-body">
                 <?php
                 echo form_open('toten/caricaturas/compartilhar');
                 echo form_hidden('nome', $cliente->nome);
                 echo form_hidden('caricatura', $cliente->caricatura);
-                echo form_label('Compartilhar caricatura nesse email');
+                echo form_label('Compartilhar caricatura nesse email?');
                 echo form_input(array('class' => 'form-control', 'name' => 'email', 'value' => $cliente->email));
                 ?>
             </div>

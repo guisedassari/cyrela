@@ -99,7 +99,7 @@ class Caricaturas extends CI_Controller {
 
 
         $result = $this->email
-                ->from('guisedassari@gmail.com')
+                ->from('rjzcyrela@querovivernesserio.com.br')
                 /* ->reply_to('guisedassari@gmail.com')   */ // Optional, an account where a human being reads.
                 ->to($dados['email'])
                 ->subject($subject)
