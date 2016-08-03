@@ -1,4 +1,4 @@
-<div class="modal fade" id="exampleModal<?= $cliente->id_cliente; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal fade text-left" id="exampleModal<?= $cliente->id_cliente; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

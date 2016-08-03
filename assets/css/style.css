@@ -34,6 +34,19 @@
     border: 1px solid transparent;
     border-radius: 0px;
 }
+.btn-email {
+    color: #fff;
+    font-weight: 600;
+    background-color: #d70909;
+    border-color: #d70909;
+    border-radius: 4px;
+    padding: 3px 10px;
+}
+.btn-email:hover {
+    color: #fff;
+    background-color: #ea4444;
+    border-color: #ea4444;
+}
 .btn-azul {
     color: #fff;
     background-color: #00adef;
@@ -52,7 +65,7 @@ body {
 }
 .navbar-inverse {
     background-color: #222;
-    border-color: #080808;
+    border-bottom: #080808;
 }
 .panel-heading {
     padding: 5px 10px;
@@ -79,7 +92,7 @@ body {
 }
 
 .pergunta label {
-font-size: 35px;           
+    font-size: 35px;           
 }
 .formulario-questionario {
     margin-top: 30px;
@@ -88,7 +101,7 @@ font-size: 35px;
 .barra {
     background-color: rgba(0,0,0,0.5);
     padding: 15px;
-    margin: -84px 0;
+    margin: -78px 0;
 }
 
 .img-compartilhar {
