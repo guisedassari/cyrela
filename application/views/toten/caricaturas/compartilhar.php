@@ -10,12 +10,13 @@
 <div class="col-md-10 col-md-offset-1">
     <div class="row barra">
         <div class="col-md-8">
-           <?php echo anchor('/toten', '<i class="fa fa-sign-out" aria-hidden="true"></i> Voltar ao inicio', array('class' => 'btn btn-azul'));
-    echo '&nbsp;';?>
+            <?php echo anchor('/toten', '<i class="fa fa-sign-out" aria-hidden="true"></i> Voltar ao inicio', array('class' => 'btn btn-azul'));
+            echo '&nbsp;';
+            ?>
         </div>
         <div class="col-md-2 text-right">
             <button type="button" class="btn btn-email" data-toggle="modal" data-target="#exampleModal<?= $cliente->id_cliente; ?>"><i class="fa fa-envelope" aria-hidden="true"></i> Email</button>
-            <?php include 'modal_email.php'; ?>
+<?php include 'modal_email.php'; ?>
         </div>
 
         <div class="col-md-2">
@@ -34,3 +35,14 @@
         </div>
     </div>
 </div>
+<script language="JavaScript">
+    setTimeout('delayReload()', 60000);
+    function delayReload()
+    {
+        if (navigator.userAgent.indexOf("MSIE") != -1) {
+            history.go(0);
+        } else {
+            window.location = "http://localhost/cyrela/toten";
+        }
+    }
+</script>

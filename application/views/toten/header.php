@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
 
         <title>Caricaturas</title>
         <link rel="shortcut icon" href="<?= base_url("assets/img/cyrela.ico"); ?>" type="image/x-icon" />
@@ -20,10 +20,12 @@
             <div class="container">
                 <div class="panel-heading">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <?= img('assets/img/topo-logo-cyrela-rjz.png', FALSE, array('class' => 'logo-login')); ?>
+                        <div class="col-lg-9">
+                            <a href="toten">
+                                <?= img('assets/img/topo-logo-cyrela-rjz.png', FALSE, array('class' => 'logo-login')); ?>
+                            </a>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-3 text-right">
                             <form action="pesquisar" method="post">
                                 <div class="input-group input-pesquisa">
                                     <input type="text" name="pesquisa" class="form-control" placeholder="Pesquisar">

@@ -35,7 +35,7 @@ if (!($_SESSION['usuario_logado'])) {
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <?= img('assets/img/topo-logo-cyrela.png', FALSE, array('class' => 'img-responsive logo-admin')); ?>
+                        <?= img('assets/img/topo-logo-cyrela-rjz.png', FALSE, array('class' => 'img-responsive logo-admin')); ?>
                     </a>
                 </div>
                 <!-- Top Menu Items -->

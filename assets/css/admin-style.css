@@ -37,7 +37,7 @@ body {
 
 /*-----------painel-administrativo---------------*/
 .logo-admin {
-    max-width: 58%!important;
+    max-width: 78%!important;
 }
 
 .form_add input {
@@ -58,4 +58,13 @@ body {
     max-width: 100%;
     object-fit: cover;
     margin-bottom: 20px;
+}
+
+
+.navbar-brand {
+    height: 50px;
+    padding: 5px!important; 
+    margin-left: 38px;
+    font-size: 18px;
+    line-height: 20px;
 }
